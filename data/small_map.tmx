@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="50" height="50" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="COLLISION" tilewidth="16" tileheight="16">
+  <image source="collision.png" width="80" height="32"/>
+ </tileset>
+ <tileset firstgid="11" name="WATER" tilewidth="16" tileheight="16">
+  <image source="WATER.png" width="16" height="16"/>
+ </tileset>
+ <tileset firstgid="12" name="LAND" tilewidth="16" tileheight="16">
+  <image source="ISLAND.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="76" name="LAND2" tilewidth="16" tileheight="16">
+  <image source="ISLAND.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="140" name="CLIFFS" tilewidth="16" tileheight="16">
+  <image source="CLIFFS.png" width="128" height="128"/>
+ </tileset>
+ <layer name="COLLISION" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3XwQqAIBBFUfv/n47ZhpDWqHce70K7Fh1HDFtjdk0+1P44aNYvDurcVByt8y1VHZGKY7RdjtXn6A7Hrn8CZRb0vWwHKxVHpOKIVByRiiNSMFRIYX1V9oodrOxgZQcrFUekYHDOadyDFO7YMwaqY9Zgx9rsYKXiiE4Yqq1Rr6rzfjbqoFszHARLluO0JdNx0pLtIFpG3qFZ3lJx3M2ZJVAQJwAA
+  </data>
+ </layer>
+ <layer name="ISLANDS" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3aTU9TQRQG4NmzILIDVuJfcAlLICRoVUAQRUDBUkBBkU9B+RDlY8uSJX/BhQksQfhXvJPOCcfJmfa2XHrPhC6e3KZp03lz7z09M3MbjDENCj2GP/BQkGfmYFnBeEPaocMbf8Edl9zYrRX3Hn2vF57AU8jBM3gOL6AvoyzrQpYQ+k4/DMBLGIQheAXD8DrD85I0C33+DYzAWxiFMRiHd/A+wxw8y/cEOSZgEj6Y4v0zBZ9hGmYyzmF1Qhd0Q4+APjcLH+GTKdaAeZfjCywoyJHUV1g0N7XA1oFVWINvKf2GVEty7DWvLbe5BjdM8Rr8AZuwBduwk1IOqiVH5v+awt22tvyEXfgFv2EP9uEADlPKQbXk2B1XPQV31FBbSqF78MQUr2E+dk5LbQmhe/AUzoTxx5KD7sG/gSx0bmKokVIWW1s2nUIkOfws53AB/+ASrpy0an2tslCdv6taXwu8zt9Vrb/veO+RRp+RFX8eo2EOUw1pHqO9z5BI8xjt/8+SWZeDz2Nsjhj+16TzwecxseawPS3vm2yfMaNgbJWgnpbnSHNOWSt+vxFjn0F4v1HvM+rq4sXX03yx9Lh+T8tpWadPmiG0ZkM097ilMvjraZp7Kppb0FjtHGMskEfz2s2EN2bb064Y+fxozmHnFn4PGLq+NPeG0pqTJIbe0F9z2jc3a09cWr2hxn3kamjdR64U1Uhe16V95EbBA2hSkMGi+T6vIfbor8FIe9HN0AKtCnLQHla5us6f2/BpyELzfX5d2dd+XS/3vEPWWZLuI9N4+TqmpixJ95FHHf5Mk7YsSeQD/Cxt8EjBeEOuAfXRPlQQJwAA
+  </data>
+ </layer>
+</map>
