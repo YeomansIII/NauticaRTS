@@ -43,10 +43,10 @@ public class Game extends BasicGame {
 		container.setTargetFrameRate(60);
 		for (int x = 0; x < map.getWidthInTiles(); x++) {
 			System.out.println();
-			for (int y = 0; y < map.getHeightInTiles(); y++) {
+			/* for (int y = 0; y < map.getHeightInTiles(); y++) {
 				int i = map.getTileId(x, y, 0);
-		System.out.print(" " + i + ",");
-	}
+		System.out.print(" " + i + ","); 
+	} */
 		}
 	}
  
@@ -119,7 +119,7 @@ public class Game extends BasicGame {
 			if (contain.getInput().isKeyDown(Input.KEY_A)){
 				for(int i=0;i<selectedUnits.size();i++) {
 					selectedUnits.get(i).attack(true,x,y);
-					
+					System.out.println("Attacking: "+x+", "+y);
 				}
 			}
 			else if(selectedUnits.size()>0) {

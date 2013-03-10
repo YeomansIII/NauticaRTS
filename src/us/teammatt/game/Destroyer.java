@@ -207,6 +207,32 @@ public class Destroyer extends Unit {
 							move = false;
 						}
 					}
+					if(shoot) {
+						while(shoot) {
+							for(int i=0;i<60;i++) {
+								scoutPoly.setX((pTileX * 8)-(viewport.getX()*8));
+								scoutPoly.setY((pTileY * 8)-(viewport.getY()*8));
+								playerX = (int) scoutPoly.getX();
+								playerY = (int) ((scoutPoly.getY())-50);
+								
+								try {
+									Thread.sleep(1);
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+							}
+							bulletList.add(1);
+							bulletList.add(0);
+							for(int i=0;i<bulletList.size();i+=2) {
+								if(!(bulletList.get(i)>100)) {
+								bulletList.set(i,bulletList.get(i)+4);
+								}
+								else {
+									bulletList.remove(i); bulletList.remove(i+1); }
+							}
+						}
+					}
 				}
 			}
 
@@ -255,8 +281,9 @@ public class Destroyer extends Unit {
 		g.drawImage(image, playerX, playerY);
 		g.draw(scoutPoly);
 		if(shoot) {
-			for(int i=0;i<bulletList.size()-1;i+=2) {
-				g.drawImage(bullet,playerX+bulletList.get(i),playerX+bulletList.get(i+1));
+			for(int i=0;i<bulletList.size()-2;i+=2) {
+				//System.out.println(playerX+bulletList.get(i)+", "+playerY+bulletList.get(i+1));
+				g.drawImage(bullet,playerX+bulletList.get(i),playerY+bulletList.get(i+1));
 			}
 		}
 		if (path != null) {

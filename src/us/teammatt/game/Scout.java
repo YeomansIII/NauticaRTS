@@ -53,6 +53,7 @@ public class Scout extends Unit {
 		thread = new Thread() {
 
 			public synchronized void run() { 
+				int direction = 0;
 				while(true) { System.out.print("");
 				scoutPoly.setX((pTileX * 8)-(viewport.getX()*8));
 				scoutPoly.setY((pTileY * 8)-(viewport.getY()*8));
@@ -61,7 +62,7 @@ public class Scout extends Unit {
 					if(move) {
 						int startX = Math.round((pTileX));
 						int startY = Math.round((pTileY));
-						int direction = 0;
+						
 						endX = Math.round((endX / 8)+viewport.getX());
 						endY = Math.round((endY / 8)+viewport.getY());
 						path = pathFinder.findPath(null, startX, startY, endX,
@@ -211,6 +212,19 @@ public class Scout extends Unit {
 					}
 					if(shoot) {
 						while(shoot) {
+							for(int i=0;i<60;i++) {
+								scoutPoly.setX((pTileX * 8)-(viewport.getX()*8));
+								scoutPoly.setY((pTileY * 8)-(viewport.getY()*8));
+								playerX = (int) scoutPoly.getX();
+								playerY = (int) ((scoutPoly.getY())-20);
+								
+								try {
+									Thread.sleep(1);
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+							}
 							bulletList.add(1);
 							bulletList.add(0);
 							for(int i=0;i<bulletList.size();i+=2) {
@@ -255,7 +269,7 @@ public class Scout extends Unit {
 		g.draw(scoutPoly);
 		if(shoot) {
 			for(int i=0;i<bulletList.size()-4;i+=2) {
-				g.drawImage(bullet,playerX+bulletList.get(i),playerX+bulletList.get(i+1));
+				g.drawImage(bullet,playerX+bulletList.get(i),playerY+bulletList.get(i+1));
 			}
 		}
 		if (path != null) {
